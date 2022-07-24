@@ -48,6 +48,7 @@ object MorseCode {
      * @param separator The value that should be placed between each piece of morse code
      * @return The encoded morse code value
      */
+    @JvmOverloads
     fun encodeText(
         value: String,
         invalid: String = DEFAULT_INVALID_VALUE,
@@ -88,6 +89,7 @@ object MorseCode {
      * @param separator The value that was placed between each piece of morse code
      * @return The encoded morse code value
      */
+    @JvmOverloads
     fun decodeText(
         value: String,
         invalid: String = DEFAULT_INVALID_VALUE,
