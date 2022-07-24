@@ -46,8 +46,40 @@ publishing {
             }
         }
     }
+
+    publications {
+        register<MavenPublication>("sonatype") {
+            from(components["java"])
+
+            pom {
+                name.set("More Code")
+                description.set("Library containing utilities for working with morse code")
+                url.set("https://github.com/jacobtread/MorseCode")
+
+                licenses {
+                    license {
+                        name.set("MIT")
+                        url.set("https://github.com/jacobtread/MorseCode/blob/master/LICENSE.md")
+                    }
+                }
+
+                developers {
+                    developer {
+                        id.set("jacobtread")
+                        name.set("Jacobtread")
+                        email.set("jacobtread@gmail.com")
+                    }
+                }
+
+                scm {
+                    url.set("https://github.com/jacobtread/MorseCode")
+                }
+            }
+        }
+    }
 }
 
 signing {
     useGpgCmd()
+    sign(publishing.publications)
 }
