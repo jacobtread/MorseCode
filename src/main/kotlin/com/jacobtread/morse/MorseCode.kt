@@ -42,9 +42,9 @@ object MorseCode {
         reverseMap
     }
 
-    private const val DEFAULT_INVALID_VALUE: String = "#"
-    private const val DEFAULT_SPACE_VALUE: String = "/"
-    private const val DEFAULT_SEPARATOR: String = " "
+    const val DEFAULT_INVALID_VALUE: Char = '#'
+    const val DEFAULT_SPACE_VALUE: Char = '/'
+    const val DEFAULT_SEPARATOR: Char = ' '
 
     /**
      * Encodes the provided text into its morse code representation using
@@ -59,9 +59,9 @@ object MorseCode {
     @JvmOverloads
     fun encodeText(
         value: String,
-        invalid: String = DEFAULT_INVALID_VALUE,
-        space: String = DEFAULT_SPACE_VALUE,
-        separator: String = DEFAULT_SEPARATOR,
+        invalid: Char = DEFAULT_INVALID_VALUE,
+        space: Char = DEFAULT_SPACE_VALUE,
+        separator: Char = DEFAULT_SEPARATOR,
     ): String {
         val output = StringBuilder()
         val lastIndex = value.length - 1
@@ -100,9 +100,9 @@ object MorseCode {
     @JvmOverloads
     fun decodeText(
         value: String,
-        invalid: String = DEFAULT_INVALID_VALUE,
-        space: String = DEFAULT_SPACE_VALUE,
-        separator: String = DEFAULT_SEPARATOR,
+        invalid: Char = DEFAULT_INVALID_VALUE,
+        space: Char = DEFAULT_SPACE_VALUE,
+        separator: Char = DEFAULT_SEPARATOR,
     ): String {
         val output = StringBuilder()
         val spaces = value.split(space) // Split the values based on spaces
