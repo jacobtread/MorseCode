@@ -1,3 +1,9 @@
+/**
+ * Utility class for encoding and decoding morse code
+ *
+ * @see encodeText For encoding text to morse code
+ * @see decodeText For decoding morse code to text
+ */
 object MorseCode {
 
     /**
@@ -123,5 +129,4 @@ object MorseCode {
         }
         return output.toString()
     }
-
 }
